@@ -15,6 +15,7 @@
 "./README.md"
 "./REVIEW_GUIDELINES.md"
 "./code-of-conduct.md"
+"./fav.log.sort"
 "./includefile.conf"
 "./incubator/artifactory/.helmignore"
 "./incubator/artifactory/Chart.yaml"
