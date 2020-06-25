@@ -1,10 +1,9 @@
 # Default values for opa.
 # -----------------------
 #
-# The 'opa' key embeds an OPA configuration file. See
-# https://www.openpolicyagent.org/docs/configuration.html for more details.
-# Default value is no default config. For custom config, the opa key
-# needs to include the opa config yaml, eg:
+# The 'opa' key embeds an OPA configuration file. See https://www.openpolicyagent.org/docs/configuration.html for more details.
+# Use 'opa: false' to disable the OPA configuration and rely on configmaps for policy loading.
+# See https://www.openpolicyagent.org/docs/latest/kubernetes-admission-control/#3-deploy-opa-on-top-of-kubernetes and the `mgmt.configmapPolicies` section below for more details.
 opa:
   services:
     controller:
@@ -146,11 +145,27 @@ logFormat: text
 # or more replicas.
 replicas: 1
 
-# To control how the OPA is scheduled on the cluster, set the tolerations and
-# nodeSelector values below. For example, to deploy OPA onto the master nodes:
+# To control how the OPA is scheduled on the cluster, set the affinity,
+# tolerations and nodeSelector values below. For example, to deploy OPA onto
+# the master nodes, 1 replica per node:
 #
-# tolerations: [{key: "node-role.kubernetes.io/master", effect: NoSchedule, operator: Exists}]
-# nodeSelector: {"kubernetes.io/role": "master"}
+# affinity:
+#   podAntiAffinity:
+#     requiredDuringSchedulingIgnoredDuringExecution:
+#     - labelSelector:
+#         matchExpressions:
+#         - key: "app"
+#           operator: In
+#           values:
+#           - opa
+#       topologyKey: "kubernetes.io/hostname"
+# tolerations:
+# - key: "node-role.kubernetes.io/master"
+#   effect: NoSchedule
+#   operator: Exists
+# nodeSelector:
+#   kubernetes.io/role: "master"
+affinity: {}
 tolerations: []
 nodeSelector: {}
 
