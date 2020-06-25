@@ -10,19 +10,19 @@
     remote = helm
     branch = master
 [merge]
-	allow = true
+    allow = true
 [branch "dev"]
     remote = github
     merge = refs/heads/dev
 [commit]
-	message = n
+    message = n
 [vrun]
-	silent = false
-	async = false
+    silent = false
+    async = false
 [deploy]
-	host = localhost
-	path = ~/myproject/git/Kubernetes/helm-charts
+    host = localhost
+    path = ~/myproject/git/Kubernetes/helm-charts
 [gdif]
-	ignore = stable/mariadb/deploy.sh
-	ignore = stable/nfs-server-provisioner/deploy.sh
-	ignore = stable/wordpress/deploy.sh
+    ignore = stable/mariadb/deploy.sh
+    ignore = stable/nfs-server-provisioner/deploy.sh
+    ignore = stable/wordpress/deploy.sh
