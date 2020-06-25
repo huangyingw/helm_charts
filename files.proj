@@ -3647,6 +3647,7 @@
 "./stable/nfs-server-provisioner/Chart.yaml"
 "./stable/nfs-server-provisioner/OWNERS"
 "./stable/nfs-server-provisioner/README.md"
+"./stable/nfs-server-provisioner/deploy.sh"
 "./stable/nfs-server-provisioner/templates/NOTES.txt"
 "./stable/nfs-server-provisioner/templates/_helpers.tpl"
 "./stable/nfs-server-provisioner/templates/clusterrole.yaml"
