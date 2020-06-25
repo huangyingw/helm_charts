@@ -22,3 +22,7 @@
 [deploy]
 	host = localhost
 	path = ~/myproject/git/Kubernetes/helm-charts
+[gdif]
+	ignore = stable/mariadb/deploy.sh
+	ignore = stable/nfs-server-provisioner/deploy.sh
+	ignore = stable/wordpress/deploy.sh
