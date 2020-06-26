@@ -1552,6 +1552,7 @@
 "./stable/datadog/OWNERS"
 "./stable/datadog/README.md"
 "./stable/datadog/ci/cluster-agent-and-worker-values.yaml"
+"./stable/datadog/ci/cluster-agent-and-worker-with-dedicated-rbac-values.yaml"
 "./stable/datadog/ci/cluster-agent-metrics-server-service-port-values.yaml"
 "./stable/datadog/ci/cluster-agent-volumes-and-mounts-values.yaml"
 "./stable/datadog/ci/cluster-agent-wpa.yaml"
