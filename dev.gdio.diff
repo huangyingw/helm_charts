@@ -1,0 +1,20 @@
+diff --git a/stable/kubernetes-dashboard/values.yaml b/stable/kubernetes-dashboard/values.yaml
+index 06f469736..3dba71921 100644
+--- ./stable/kubernetes-dashboard/values.yaml
++++ ./stable/kubernetes-dashboard/values.yaml
+@@ -76,9 +76,14 @@ affinity: {}
+ # priorityClassName: ""
+ 
+ service:
+-  type: ClusterIP
++  type: NodePort
+   externalPort: 443
+   
++    ## List of IP addresses at which the controller services are available
++    ## Ref: https://kubernetes.io/docs/user-guide/services/#external-ips
++    ##
++  externalIPs: ["10.1.10.168", "192.168.3.2"]
++
+   ## This allows an override of the heapster service name
+   ## Default: {{ .Chart.Name }}
+   ##
