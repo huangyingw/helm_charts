@@ -3009,6 +3009,8 @@
 "./stable/kubernetes-dashboard/OWNERS"
 "./stable/kubernetes-dashboard/README.md"
 "./stable/kubernetes-dashboard/deploy.sh"
+"./stable/kubernetes-dashboard/deployment.yaml"
+"./stable/kubernetes-dashboard/recommended.yaml"
 "./stable/kubernetes-dashboard/templates/NOTES.txt"
 "./stable/kubernetes-dashboard/templates/_helpers.tpl"
 "./stable/kubernetes-dashboard/templates/clusterrole-readonly.yaml"
