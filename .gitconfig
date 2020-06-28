@@ -24,6 +24,7 @@
     path = ~/myproject/git/Kubernetes/helm-charts
 [gdif]
     ignore = stable/kubernetes-dashboard/deploy.sh
+    ignore = stable/kubernetes-dashboard/deployment.yaml
     ignore = stable/mariadb/deploy.sh
     ignore = stable/nfs-server-provisioner/deploy.sh
     ignore = stable/wordpress/deploy.sh
