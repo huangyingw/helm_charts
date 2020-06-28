@@ -5657,6 +5657,7 @@
 "./stable/wordpress/templates/deployment.yaml"
 "./stable/wordpress/templates/externaldb-secrets.yaml"
 "./stable/wordpress/templates/ingress.yaml"
+"./stable/wordpress/templates/pvc.yaml"
 "./stable/wordpress/templates/secrets.yaml"
 "./stable/wordpress/templates/servicemonitor.yaml"
 "./stable/wordpress/templates/svc.yaml"
