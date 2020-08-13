@@ -76,8 +76,13 @@ affinity: {}
 # priorityClassName: ""
 
 service:
-  type: ClusterIP
+  type: NodePort
   externalPort: 443
+  
+    ## List of IP addresses at which the controller services are available
+    ## Ref: https://kubernetes.io/docs/user-guide/services/#external-ips
+    ##
+  externalIPs: ["10.1.10.168", "192.168.3.2"]
 
   ## This allows an override of the heapster service name
   ## Default: {{ .Chart.Name }}
