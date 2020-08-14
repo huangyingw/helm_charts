@@ -29,4 +29,3 @@
     ignore = stable/mariadb/deploy.sh
     ignore = stable/nfs-server-provisioner/deploy.sh
     ignore = stable/wordpress/deploy.sh
-    ignore = stable/wordpress/pvc.yaml
